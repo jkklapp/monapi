@@ -16,7 +16,7 @@ Just start the server on a machine with a MongoDB running server.
 
 Returns you the status of your Mongo server.
 
-* GET '/<db>'
+* GET '/\<db\>'
 
 Make a get on your DB name and you will be returned some statistics about <db>.
 

@@ -1,0 +1,4 @@
+{
+    "mapper": "function(){  emit('A',1); }",
+    "reducer": "function(key,values){ sum = 0; for (var i = 0; i < values.length; i++) { sum+=values[i]; } return sum; }"
+}
