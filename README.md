@@ -16,41 +16,41 @@ Just start the server on a machine with a MongoDB running server.
 
 Returns you the status of your Mongo server.
 
-* GET '/\<db\>'
+* GET '/\\<db\\>'
 
-Make a get on your DB name and you will be returned some statistics about <db>.
+Make a get on your DB name and you will be returned some statistics about \<db\>.
 
 * GET '/_dbs'
 
 Retrieves a list of db names available.
 
-* GET '/<db>/<coll>'
+* GET '/\<db\>/\<coll\>'
 
-Retrieves info from <coll> collection within <db> database.
+Retrieves info from \<coll\> collection within \<db\> database.
 
-* GET '/<db>/_colls'
+* GET '/\<db\>/_colls'
 
-Retrieves a list of collections inside <db>.
+Retrieves a list of collections inside \<db\>.
 
-* GET '/<db>/<coll>/<n>'
+* GET '/\<db\>/\<coll\>/\<n\>'
 
-Retrieves the nth document inside <coll> collection of <db> database.
+Retrieves the nth document inside \<coll\> collection of \<db\> database.
 
-* POST '/<db>/<coll>/_query'
+* POST '/\<db\>/\<coll\>/_query'
 
-Executes a query on <coll> collection contained in <db> database. The data posted must be a well-formed JSON to query documents.
+Executes a query on \<coll\> collection contained in \<db\> database. The data posted must be a well-formed JSON to query documents.
 
-* POST '/<db>/<coll>/_insert'
+* POST '/\<db\>/\<coll\>/_insert'
 
-Inserts a well-formed JSON on <coll> collection inside <db> database.
+Inserts a well-formed JSON on \<coll\> collection inside \<db\> database.
 
-* POST '/<db>/<coll>/_mr/<output>'
+* POST '/\<db\>/\<coll\>/_mr/\<output\>'
 
-Executes a map-reduce job on <coll> collection within <db> database. Results are stored in <output> collection within <db> database. Mapper and reducer codes are provided in a JSON file like this:
+Executes a map-reduce job on \<coll\> collection within \<db\> database. Results are stored in \<output\> collection within \<db\> database. Mapper and reducer codes are provided in a JSON file like this:
 
 {
     "mapper": "function(){  emit('A',1); }",
-    "reducer": "function(key,values){ sum = 0; for (var i = 0; i < values.length; i++) { sum+=values[i]; } return sum; }"
+    "reducer": "function(key,values){ sum = 0; for (var i = 0; i \< values.length; i++) { sum+=values[i]; } return sum; }"
 }
 
 
